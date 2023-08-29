@@ -12,7 +12,7 @@ pipenv shell
     c. ipdb
     d. faker (to generate fake data)
 3. create migration environment (after `pipenv shell`, `alembic init migrations`)
-4. configure migration environment (alembic.ini and env.py) (sqlalchemy.url = sqlite:///events_tracker.db)
+4. configure migration environment (alembic.ini and env.py) (sqlalchemy.url = sqlite:///events_tracker.db) (made some updates to env.py)
 5. create declarative_base
 6. create schema (python classes or models)
 7. populate database with seeds
