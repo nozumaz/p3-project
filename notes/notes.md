@@ -65,6 +65,7 @@ To Do List application that user can updated through Command Line Interface
 > *Describe a few of the methods you plan on including in your application to query your database*
 - User types command:
     - `view` to see the list of task items
+    - `add` to add new items
     - `edit` to edit item
     - `delete` to delete item
 
