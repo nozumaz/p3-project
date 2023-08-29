@@ -44,8 +44,8 @@ tables
 To Do List application that user can updated through Command Line Interface
 
 ### User story
-- User is runs executable file which asks user for any **`Task`** they want to complete and **`Deadline`** to complete by
-- **`Category`** classification in case the To Do list needs to be filtered out
+- User is runs executable file which asks user for any `Task` they want to complete and `Deadline` to complete by
+- `Category` classification in case the To Do list needs to be filtered out
 - User can also delete or update tasks as necessary
 
 ### Use of Concepts
@@ -55,7 +55,7 @@ To Do List application that user can updated through Command Line Interface
 
 #### Database Tables
 > *Describe how you will use SQLAlchemy to create and interact with 2 or more related database tables*
-- **`Task`** table holds task id, task name, deadline, category
+- `Task` table holds task id, task name, deadline, category
 
 #### Object Relationships
 > *Describe the types of relationships your different classes and tables will have with each other*
