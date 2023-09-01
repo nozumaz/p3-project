@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from models import Task, Category
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from simple_term_menu import TerminalMenu
@@ -11,19 +13,24 @@ def main():
     
     options = ["View", "Add", "Edit", "Delete"]
     terminal_menu = TerminalMenu(options)
-    menu_entry_index = terminal_menu.show()
-    print(f"You have selected {options[menu_entry_index]}!")
+
+    while True:
+        print()
+
+        menu_entry_index = terminal_menu.show()
+        print(f"You have selected {options[menu_entry_index]}!")
 
 
-    if terminal_menu[menu_entry_index] == "View":
-        view(session, Task)
+        if options[menu_entry_index] == "View":
+            print(f"viewing")
+            view(session, Task)
 
 
 # initialize CLI
 if __name__ == '__main__':
 
 
-    engine = create_engine('sqlite:///database.db')
+    engine = create_engine('sqlite:///events_tracker.db')
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -35,4 +42,5 @@ if __name__ == '__main__':
 
 
 def view(session, task):
+    print(f"view picked")
     return session.query(task).order_by(task.date).all()
