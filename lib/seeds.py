@@ -12,7 +12,7 @@ session = Session() # Query the DB with session example: session.query(ModelOne)
 import ipdb #; ipdb.set_trace() # # Dont forget to add ipdb as a dependency - pipenv install ipdb
 
 # For generating Fake data: https://faker.readthedocs.io/en/master/providers.html
-from faker import Faker 
+# from faker import Faker 
 import random
 
 # For working with an API and retrieving json data
@@ -32,23 +32,23 @@ session.query(task_category).delete()
 print("populate tasks tables")
 tasks = [
     Task(
-        name="test1",
+        name="take dog on a walk",
         date=datetime.now()
     ),
     Task(
-        name="test2",
+        name="buy groceries",
         date=datetime.now()
     ),
     Task(
-        name="test3",
+        name="study",
         date=datetime.now()
     ),
     Task(
-        name="test4",
+        name="clean",
         date=datetime.now()
     ),
     Task(
-        name="test5",
+        name="read",
         date=datetime.now()
     )
 ]
@@ -63,6 +63,12 @@ categories = [
     ),
     Category(
         name="shopping",
+    ),
+    Category(
+        name="chores",
+    ),
+    Category(
+        name="misc",
     )
 ]
 
@@ -83,10 +89,6 @@ for task in tasks:
 session.commit()
 
 # .
-
-
-
-# tasks.categories.append(categories)
 
 ipdb.set_trace()
 

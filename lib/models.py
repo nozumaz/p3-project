@@ -3,6 +3,8 @@
 from sqlalchemy import Column, Integer, String, Date, ForeignKey, Table
 from sqlalchemy.orm import declarative_base, relationship
 
+from simple_term_menu import TerminalMenu
+
 Base = declarative_base()
 
 task_category = Table(
@@ -14,6 +16,8 @@ task_category = Table(
 
 
 # model name singular, table name plural
+
+# create Task class
 class Task(Base):
     __tablename__ = "tasks"
 
@@ -41,3 +45,5 @@ class Category(Base):
 
 
 # list methods useds to add categories, etc
+
+
