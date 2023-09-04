@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
-from models import Task, Category
+from models import Task, Category, view
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from simple_term_menu import TerminalMenu
 # from models import Tasks
+
+
 
 # create menu
 def main():
@@ -41,6 +43,3 @@ if __name__ == '__main__':
 
 
 
-def view(session, task):
-    print(f"view picked")
-    return session.query(task).order_by(task.date).all()

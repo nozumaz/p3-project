@@ -47,3 +47,6 @@ class Category(Base):
 # list methods useds to add categories, etc
 
 
+def view(session, task):
+    print(f"view picked")
+    return session.query(task).order_by(task.date).all()
