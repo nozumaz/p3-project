@@ -61,3 +61,6 @@ def view(session, task):
         print(f'SELECTED: {task_options[task_menu_index]}')
     else:
         print('No tasks listed')
+
+def add(session, expense):
+    print('New Task:')
