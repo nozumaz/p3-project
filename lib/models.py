@@ -51,4 +51,13 @@ class Category(Base):
 
 def view(session, task):
     print(f"view picked")
-    return session.query(task).order_by(task.date).all()
+
+    results = session.query(task).order_by(task.date).all()
+
+    if results:
+        task_options = [str(item) for item in results]
+        task_menu = TerminalMenu(task_options)
+        task_menu_index = task_menu.show()
+        print(f'SELECTED: {task_options[task_menu_index]}')
+    else:
+        print('No tasks listed')
