@@ -79,12 +79,12 @@ session.commit()
 
 
 
-for task in tasks:
+""" for task in tasks:
     #for i in range(len(tasks)):
     task.categories.append(random.choice(categories))
         #categories = Categories(
         #   name="category1"
-        #)
+        #) """
 
 session.commit()
 

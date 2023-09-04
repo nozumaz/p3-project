@@ -27,9 +27,10 @@ class Task(Base):
     date = Column(Date)
 
     categories = relationship("Category", secondary=task_category)
+    # categories = relationship("Category", back_populates='tasks')
 
     def __repr__(self):
-        return f"Task(id={self.id!r}, name={self.name!r}, fullname={self.date!r})"
+        return f"Task(id={self.id!r}, name={self.name!r}, date={self.date!r})"
 
 class Category(Base):
     __tablename__ = "categories"
@@ -38,7 +39,8 @@ class Category(Base):
 
     name = Column(String)
 
-    tasks = relationship("Task", secondary=task_category)
+    # tasks = relationship("Task", secondary=task_category)
+    # tasks = relationship(Task, back_populates='category')
 
     def __repr__(self):
         return f"Category(id={self.id!r}, name={self.name!r})"

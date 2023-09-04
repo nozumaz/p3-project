@@ -5,7 +5,6 @@ from models import Task, Category, view
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from simple_term_menu import TerminalMenu
-# from models import Tasks
 
 
 
